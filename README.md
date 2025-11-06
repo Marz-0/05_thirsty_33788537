@@ -16,6 +16,7 @@ The project now uses *Express.js* instead of the built-in HTTP module, and inclu
   - path – to resolve file paths safely
 - Express.js - Framework for Node.js. Helps define routes, handling requests and responses, as well as serving files
 - Javascript - used in the /date route for client-side behaviour. This is run in the browser, not on the server. It dynamically inserts the current date and time for that local device onto the page
+- EJS - for templating for HTML pages
 - Routing - modularising routes into seperate a seperate file (routes/main.js). 
 - git and .gitignore - ignored the node_modules folder as it is unnecessary to run the server
 
@@ -27,7 +28,7 @@ The project now uses *Express.js* instead of the built-in HTTP module, and inclu
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Marz-0/04_express_33788537
+git clone https://github.com/Marz-0/05_thirsty_33788537
 ```
 
 ### 2. Install Node.js (if not installed already)
@@ -44,12 +45,6 @@ Lightweight Express/EJS project used for a Dynamic Web Applications assignment. 
 - Static assets served from `public/` (CSS)
 - Routes: home, about (shop locations), search, register, survey (form + result)
 - Simple in-memory shop data used by views
-
-## Tech
-
-- Node.js + Express
-- EJS templating
-- Plain CSS in `public/styles.css`
 
 ## Getting started (Windows PowerShell)
 
@@ -106,10 +101,4 @@ node index.js
 - Add persistent storage (JSON file or a database) for survey responses
 - Improve accessibility and responsive layout for forms
 - Add client-side validation and nicer UI for radio/checkbox groups
-
-## Licence
-
-This project is an educational assignment. Use or adapt freely for learning purposes.
-
-
 
