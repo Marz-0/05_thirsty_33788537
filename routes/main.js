@@ -5,7 +5,14 @@ const router = express.Router();
 //define our data
 
 var shopData = {shopName: "Drinks4U",
-                productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"]};
+                productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
+                shopLocations:[
+                    {manager: "Marzhan", address: "1 Main St, Cityville"},
+                    {manager: "Jem", address: "2 Elm St, Townsville"},
+                    {manager: "Bob", address: "3 Oak St, Villagetown"},
+                ]
+
+            };
 
 
 

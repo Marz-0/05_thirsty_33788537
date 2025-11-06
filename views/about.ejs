@@ -1,10 +1,16 @@
-<!doctype html>
-<html>
-  <head>
-    <title><%=shopName%></title> 
-  </head>
-  <body>
-    <h1>About <%=shopName%> Shop</h1>
+<%- include('partials/header') %>
+
+  <main>
+    <h1>About <%= shopName %> Shop</h1>
     <p>We sell all sorts of drinks</p>
-  </body>
-</html>
+    <p>From soft drinks to juices, we have it all!</p>
+
+    <h2>Our Locations</h2>
+    <ul>
+        <% shopLocations.forEach(function(location) { %>
+            <li><%= location.manager %> - <%= location.address %></li>
+        <% }); %>
+    </ul>
+  </main>
+
+<%- include('partials/footer') %>
