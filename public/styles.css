@@ -1,0 +1,98 @@
+/*
+  public/styles.css
+  The CSS styles for the Thirsty website
+
+
+  Simple stylesheet for the Thirsty site. It provides:
+    - CSS custom properties (colours)
+    - Base layout
+    - Header, container (card) styles
+    - Form control and button styling
+
+*/
+
+
+:root{
+  --bg1: #f6f8ff;
+  --bg2: #e8f0ff;
+  --accent: #2a6fdb;
+  --muted: #6b7280;
+  --card: #ffffff;
+}
+
+/* Base / Layout*/
+html,body{
+  height:100%;
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:#111827;
+}
+
+.site-header{
+  background: linear-gradient(90deg, rgba(0, 255, 94, 0.95), rgba(58,141,255,0.95));
+  color:white;
+  padding:20px 0;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(20,40,80,0.08);
+}
+
+.site-header h1{ margin:0; font-size:1.6rem }
+
+/* Card-like page container*/
+.container{
+  max-width:900px;
+  margin:30px auto;
+  background: var(--card);
+  padding:24px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* Headings */
+h2{ color:var(--accent); margin-top:0 }
+
+/* Lists */
+ul{ padding-left:1.25rem }
+
+/* Form labels */
+label{
+  display:block;
+  margin-top:10px;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+/* Form controls*/
+input[type="text"], input[type="email"]{
+  width:100%;
+  padding:10px 12px;
+  margin-top:6px;
+  border:1px solid #e6e9ef;
+  border-radius:6px;
+  box-sizing:border-box;
+}
+
+/* Buttons */
+input[type="submit"], .btn{
+  margin-top:14px;
+  padding:10px 16px;
+  background:var(--accent);
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Button hover state */
+input[type="submit"]:hover, .btn:hover{
+  background:#1f55b8;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:0.9rem;
+  padding:18px 0 40px;
+}
