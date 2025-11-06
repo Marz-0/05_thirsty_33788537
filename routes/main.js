@@ -7,9 +7,9 @@ const router = express.Router();
 var shopData = {shopName: "Drinks4U",
                 productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
                 shopLocations:[
-                    {manager: "Marzhan", address: "1 Main St, Cityville"},
-                    {manager: "Jem", address: "2 Elm St, Townsville"},
-                    {manager: "Bob", address: "3 Oak St, Villagetown"},
+                    {manager: "Marzhan", address: "1 Main St, London, UK"},
+                    {manager: "Jem", address: "2 Baker St, London, UK"},
+                    {manager: "Bob", address: "3 Soho St, London, UK"},
                 ]
 
             };
@@ -30,9 +30,34 @@ router.get("/search", (req, res) => {
     res.render("search.ejs", shopData);
 });
 
+// Survey routes
+router.get('/survey', (req, res) => {
+    // render the survey form, productCategories provided in shopData
+    res.render('survey.ejs', shopData);
+});
+
+router.post('/survey_result', (req, res) => {
+    // collect responses from the form 
+    const response = {
+        first: req.body.first_name || '',
+        last: req.body.surname || '',
+        email: req.body.email || '',
+        age: req.body.age || '',
+        category: req.body.drink_category || 'Not specified',
+        student: req.body.is_student ? 'Yes' : 'No'
+    };
+
+    // pass both shopData and the response 
+    res.render('survey_result.ejs', Object.assign({}, shopData, { response: response }));
+});
+
 router.get('/search_result', function (req, res) {
-    // TODO: search in the database
-    res.send("You searched for " + req.query.search_text + " in " + req.query.category);
+    // Render search results page using the search template
+    const locals = Object.assign({}, shopData, {
+        searchText: req.query.search_text || '',
+        category: req.query.category || ''
+    });
+    res.render('search_result.ejs', locals);
  });
 
  router.get("/register", (req,res) => {
@@ -40,7 +65,13 @@ router.get('/search_result', function (req, res) {
 }); 
  
 router.post("/registered", (req,res) => { 
-  res.send(' Hello '+ req.body.first + ' '+ req.body.last +' you are now registered! We will send an email to '+ req.body.email);   
+    // Render a registration result page 
+    const registered = {
+        first: req.body.first || '',
+        last: req.body.last || '',
+        email: req.body.email || ''
+    };
+    res.render('registered.ejs', Object.assign({}, shopData, { registered }));
 
 }); 
 // TODO

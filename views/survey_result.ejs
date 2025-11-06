@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+  <main>
+    <h1>Survey results</h1>
+
+    <section>
+      <h2>Contact details</h2>
+      <p><strong>First name:</strong> <%= response.first %></p>
+      <p><strong>Surname:</strong> <%= response.last %></p>
+      <p><strong>Email:</strong> <%= response.email %></p>
+    </section>
+
+    <section>
+      <h2>Answers</h2>
+      <p><strong>Age:</strong> <%= response.age %></p>
+      <p><strong>Drinks category consumed:</strong> <%= response.category %></p>
+      <p><strong>Student:</strong> <%= response.student %></p>
+    </section>
+  </main>
+
+<%- include('partials/footer') %>

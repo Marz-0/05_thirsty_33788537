@@ -22,12 +22,13 @@
 
 /* Base / Layout*/
 html,body{
-  height:100%;
   margin:0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: linear-gradient(180deg,var(--bg1),var(--bg2));
   color:#111827;
+  min-height:100vh;
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
 }
+
 
 .site-header{
   background: linear-gradient(90deg, rgba(0, 255, 94, 0.95), rgba(58,141,255,0.95));
@@ -39,7 +40,7 @@ html,body{
 
 .site-header h1{ margin:0; font-size:1.6rem }
 
-/* Header links with header colour and remove underlines */
+/* Header links with header colour*/
 .site-header a{
   color: #fff;
   text-decoration: none;
@@ -51,14 +52,14 @@ html,body{
   opacity:0.95;
 }
 
-.container{
-  max-width:900px;
-  margin:30px auto;
-  background: var(--card);
-  padding:24px;
-  border-radius:8px;
-  box-shadow:0 6px 18px rgba(16,24,40,0.06);
-}
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: transparent; 
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: none;
+} 
 
 .site-header .container{
   background: transparent;
@@ -70,6 +71,19 @@ html,body{
 
 /* Headings */
 h2{ color:var(--accent); margin-top:0 }
+
+main{ padding: 0 20px; }
+
+/* Survey specific tweaks */
+.survey-option{
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 16px;
+  margin-top: 0; 
+  vertical-align: middle;
+}
+
+.survey-question{ display:block; margin-top:12px; }
 
 /* Lists */
 ul{ padding-left:1.25rem }

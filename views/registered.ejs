@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+  <main>
+    <h1>Registration complete</h1>
+
+    <section>
+      <p>Thank you for registering. Here are the details we received:</p>
+      <p><strong>First name:</strong> <%= registered.first %></p>
+      <p><strong>Last name:</strong> <%= registered.last %></p>
+      <p><strong>Email:</strong> <%= registered.email %></p>
+    </section>
+  </main>
+
+<%- include('partials/footer') %>
