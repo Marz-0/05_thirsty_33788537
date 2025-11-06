@@ -27,7 +27,7 @@ The project now uses *Express.js* instead of the built-in HTTP module, and inclu
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Marz-0/04_express_33788537
+git clone https://github.com/Marz-0/05_thirsty_33788537
 ```
 
 ### 2. Install Node.js (if not installed already)
