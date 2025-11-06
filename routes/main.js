@@ -7,9 +7,9 @@ const router = express.Router();
 var shopData = {shopName: "Drinks4U",
                 productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
                 shopLocations:[
-                    {manager: "Marzhan", address: "1 Main St, London, UK"},
-                    {manager: "Jem", address: "2 Baker St, London, UK"},
-                    {manager: "Bob", address: "3 Soho St, London, UK"},
+                    {manager: "Manager: Marzhan", address: "1 Main St, London, UK"},
+                    {manager: "Manager: Jem", address: "2 Baker St, London, UK"},
+                    {manager: "Manager: Bob", address: "3 Soho St, London, UK"},
                 ]
 
             };
